@@ -16,3 +16,22 @@ h1 {
     top: 25%;
     left: 25%;
   }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+span {
+  color: #c5c6c7;
+  opacity: 0.5;
+  margin: 5px;
+}
+
+span:hover {
+  color: #66FCF1;
+  opacity: 1;
+  cursor: pointer;
+}

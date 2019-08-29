@@ -9,14 +9,17 @@
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200&display=swap');
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', 'Playfair Display', 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 
-  min-height: 100vh;
 }
 #nav {
   padding: 30px;
@@ -31,6 +34,6 @@
 
 body {
   background-color: #1F2833;
-  overflow: hidden;
+  overflow: auto;
 }
 </style>
