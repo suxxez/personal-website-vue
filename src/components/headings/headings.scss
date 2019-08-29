@@ -1,11 +1,14 @@
+@import '../../variables.scss';
+
 h1 {
     text-align: left;
-    color: #66fcf1;
+    
+    color: $heading-color;
   }
   
   h2 {
     text-align: left;
-    color: #c5c6c7;
+    color: $subheading-color;
   }
   
   .outer-div {
@@ -31,7 +34,7 @@ span {
 }
 
 span:hover {
-  color: #66FCF1;
+  color: $highlight-color;
   opacity: 1;
   cursor: pointer;
 }
