@@ -1,0 +1,19 @@
+<template>
+  <div class="home">
+    <headings/>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import headings from '../components/headings/headings';
+
+@Component({
+  components: {
+    headings
+  }
+})
+export default class Home extends Vue {
+
+}
+</script>
