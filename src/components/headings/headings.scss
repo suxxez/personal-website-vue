@@ -27,6 +27,7 @@ h1 {
 h2 {
   text-align: left;
   color: $subheading-color;
+  animation-duration: 1s;
 }
 
 span {
@@ -53,4 +54,21 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  animation-delay: 1.2s;
+}
+
+.software {
+  animation-delay: 0.3s;
+}
+
+.web {
+  animation-delay: 0.6s;
+}
+
+.photo {
+  animation-delay: 0.9s;
+}
+
+.video {
+  animation-delay: 1.2s;
 }
