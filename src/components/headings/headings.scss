@@ -1,16 +1,7 @@
 @import '../../variables.scss';
 
-h1 {
-    text-align: left;
-    
-    color: $heading-color;
-  }
-  
-  h2 {
-    text-align: left;
-    color: $subheading-color;
-  }
-  
+@media only screen and (min-width: 600px) {
+
   .outer-div {
     text-align: center;
     margin: auto;
@@ -20,11 +11,22 @@ h1 {
     left: 25%;
   }
 
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 50%;
+  .flex-container {
+    width: 50%;
+  }
+
+
+}
+
+h1 {
+  text-align: left;
+  
+  color: $heading-color;
+}
+
+h2 {
+  text-align: left;
+  color: $subheading-color;
 }
 
 span {
@@ -37,4 +39,18 @@ span:hover {
   color: $highlight-color;
   opacity: 1;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+ }
+
+ .outer-div {
+   margin: 1rem
+ }
+
+ .flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
