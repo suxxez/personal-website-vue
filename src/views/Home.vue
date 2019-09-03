@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <headings/>
+    <headings />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import headings from '../components/headings/headings';
+import headings from '../components/headings.vue';
 
 @Component({
   components: {
