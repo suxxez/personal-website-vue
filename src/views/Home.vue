@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <headings />
+    <transition name="component-fade" mode="out-in">
+      <component v-bind:is="this.headings"></component>
+    </transition>
   </div>
 </template>
 
@@ -14,6 +16,8 @@ import headings from '../components/headings.vue';
   }
 })
 export default class Home extends Vue {
+  private headings: any = headings;
+
   created() {
     console.log(`%c ________________________________________
 < mooooooooooooooooooooooooooooooooooooo >
@@ -26,3 +30,9 @@ export default class Home extends Vue {
   }
 }
 </script>
+
+<style scoped>
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+</style>

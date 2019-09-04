@@ -1,5 +1,5 @@
 <template>
-<div class="outer-div">
+<div class="outer-div animated fadeIn">
     <h1>Software Developer</h1>
   <div class="heading-flex">
     <h2>Java</h2>
@@ -51,14 +51,13 @@ h2 {
 }
 
  .outer-div {
-   margin: 1rem
+   margin: 1rem;
  }
 
  .heading-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: -0.5rem;
 }
 
 .material-icons {
