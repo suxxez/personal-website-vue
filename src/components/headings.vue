@@ -3,19 +3,19 @@
     <h1 class="animated fadeIn">FINN FENTKER</h1>
     <div class="heading-flex">
       <h2 class="animated fadeInDown software">Software Developer</h2>
-      <router-link to="/software"><i class="material-icons animated rotateIn">desktop_windows</i></router-link>
+      <router-link to="/software"><i class="material-icons animated rotateIn software">desktop_windows</i></router-link>
     </div>
     <div class="heading-flex">
       <h2 class="animated fadeInDown web">Web Developer</h2>
-      <router-link to="/web"><i class="material-icons animated rotateIn">wifi</i></router-link>
+      <router-link to="/web"><i class="material-icons animated rotateIn web">wifi</i></router-link>
     </div>
     <div class="heading-flex">
       <h2 class="animated fadeInDown photo">Photographer</h2>
-      <router-link to="/photo"><i class="material-icons animated rotateIn">photo_camera</i></router-link>
+      <router-link to="/photo"><i class="material-icons animated rotateIn photo">photo_camera</i></router-link>
     </div>
     <div class="heading-flex">
       <h2 class="animated fadeInDown video">Videographer</h2>
-      <router-link to="/video"><i class="material-icons animated rotateIn">live_tv</i></router-link>
+      <router-link to="/video"><i class="material-icons animated rotateIn video">live_tv</i></router-link>
     </div>
     <div class="flex-container animated fadeInLeft">
       <a href="https://www.xing.com/profile/Finn_Fentker" target="_blank"><span>xing</span></a>
@@ -48,7 +48,7 @@ export default class Headings extends Vue {
     left: 25%;
   }
 
-  .flex-container {
+  .heading-flex, .flex-container{
     width: 50%;
   }
 }
@@ -70,7 +70,7 @@ span {
   margin: 5px;
 }
 
-span:hover {
+span:hover, i:hover {
   color: $highlight-color;
   opacity: 1;
   cursor: pointer;
@@ -97,7 +97,6 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
   margin-bottom: -0.5rem;
 }
 

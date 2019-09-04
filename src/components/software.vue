@@ -1,7 +1,10 @@
 <template>
 <div class="outer-div">
     <h1>Software Developer</h1>
-  <h2>Java</h2>
+  <div class="heading-flex">
+    <h2>Java</h2>
+    <router-link to="/"><i class="material-icons">arrow_back</i></router-link>
+  </div>
   <h2>Spring Boot</h2>
   <h2>SQL</h2>
   <h2>Maven</h2>
@@ -32,8 +35,12 @@ export default class Software extends Vue {
     left: 25%;
   }
 
-  .flex-container {
+  .flex-container, .heading-flex {
     width: 50%;
+  }
+
+  h1 {
+    text-align: left;
   }
 }
 
@@ -41,5 +48,34 @@ h2 {
   text-align: left;
   color: $subheading-color;
   animation-duration: 1s;
+}
+
+ .outer-div {
+   margin: 1rem
+ }
+
+ .heading-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -0.5rem;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+ a, a:link, a:visited, a:focus, a:hover, a:active {
+  color: #2c3e50;
+  text-decoration: none;
+ }
+
+ i:hover {
+  color: $highlight-color;
+  cursor: pointer;
 }
 </style>
