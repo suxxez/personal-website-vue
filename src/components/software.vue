@@ -1,29 +1,49 @@
 <template>
-<div class="outer-div animated fadeIn">
+  <div class="outer-div animated fadeIn">
     <h1>Software Developer</h1>
-  <div class="heading-flex">
-    <h2>Java</h2>
-    <router-link to="/"><i class="material-icons">arrow_back</i></router-link>
+    <div class="heading-flex">
+      <h2>Java</h2>
+      <router-link to="/"><i class="material-icons">arrow_back</i></router-link>
+    </div>
+    <h2>Spring Boot</h2>
+    <h2>SQL</h2>
+    <h2>Maven</h2>
+    <h2>SAP / ABAP</h2>
+    <h2>Git</h2>
+    <p>
+      <input id="jokeInput" type="text" />
+      <button v-on:click="getJoke()">get</button>
+    </p>
+    <p><span id="jokeField"></span></p>
   </div>
-  <h2>Spring Boot</h2>
-  <h2>SQL</h2>
-  <h2>Maven</h2>
-  <h2>SAP / ABAP</h2>
-  <h2>Git</h2>
-</div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class Software extends Vue {
-}
+  getJoke(): void {
+    const jokeInput = (document.getElementById("jokeInput") as HTMLInputElement)
+      .value;
+    const jokeField = document.getElementById("jokeField");
+    const url = `https://api.chucknorris.io/jokes/random?category=${jokeInput}`;
 
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        if (jokeField) {
+          jokeField.innerText = res.value;
+        }
+      });
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-@import '../variables.scss';
+@import "../variables.scss";
 
 @media only screen and (min-width: 600px) {
   .outer-div {
@@ -35,7 +55,8 @@ export default class Software extends Vue {
     left: 25%;
   }
 
-  .flex-container, .heading-flex {
+  .flex-container,
+  .heading-flex {
     width: 50%;
   }
 
@@ -50,31 +71,40 @@ h2 {
   animation-duration: 1s;
 }
 
- .outer-div {
-   margin: 1rem;
- }
+.outer-div {
+  margin: 1rem;
+}
 
- .heading-flex {
+.heading-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 2.5rem;
   cursor: pointer;
 }
 
- a, a:link, a:visited, a:focus, a:hover, a:active {
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
   color: #2c3e50;
   text-decoration: none;
- }
+}
 
- i:hover {
+i:hover {
   color: $highlight-color;
   cursor: pointer;
+}
+
+#jokeField {
+  color: white;
 }
 </style>
