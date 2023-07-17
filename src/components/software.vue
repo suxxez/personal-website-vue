@@ -10,11 +10,6 @@
     <h2>Maven</h2>
     <h2>SAP / ABAP</h2>
     <h2>Git</h2>
-    <p>
-      <input id="jokeInput" type="text" />
-      <button v-on:click="getJoke()">get</button>
-    </p>
-    <p><span id="jokeField"></span></p>
   </div>
 </template>
 
@@ -23,22 +18,7 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class Software extends Vue {
-  getJoke(): void {
-    const jokeInput = (document.getElementById("jokeInput") as HTMLInputElement)
-      .value;
-    const jokeField = document.getElementById("jokeField");
-    const url = `https://api.chucknorris.io/jokes/random?category=${jokeInput}`;
-
-    fetch(url)
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        if (jokeField) {
-          jokeField.innerText = res.value;
-        }
-      });
-  }
+  
 }
 </script>
 

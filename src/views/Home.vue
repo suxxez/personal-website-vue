@@ -17,17 +17,6 @@ import headings from '../components/headings.vue';
 })
 export default class Home extends Vue {
   private headings: any = headings;
-
-  created() {
-    console.log(`%c ________________________________________
-< mooooooooooooooooooooooooooooooooooooo >
- ----------------------------------------
-        \\   ^__^
-         \\  (oo)\\_______
-            (__)\\       )\\/\\
-                ||----w |
-|| ||`, "font-family:monospace")
-  }
 }
 </script>
 
